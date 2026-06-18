@@ -30,11 +30,11 @@ This checklist tracks the original Ruby SDK public areas and their Go replacemen
 ## Admin API
 - [x] generic Admin method
 - [~] resources/tags/transformations/upload presets
-- [~] metadata fields/rules wrappers
-- [~] folders wrappers; upload mappings pending
-- [~] streaming profiles wrappers
-- [~] analysis wrapper; access mode/related assets/publish pending
-- [ ] account provisioning API
+- [x] metadata fields/rules wrappers
+- [x] folders and upload mappings wrappers
+- [x] streaming profiles wrappers
+- [x] analysis/access mode/related assets/publish wrappers
+- [~] account provisioning API wrappers
 
 ## Query APIs
 - [x] Search builder
@@ -49,8 +49,8 @@ This checklist tracks the original Ruby SDK public areas and their Go replacemen
 
 ## Tests/security
 - [~] Ruby utils specs translated
-- [ ] Uploader specs translated with httptest
-- [ ] Admin/search specs translated with httptest
+- [~] Uploader specs translated with httptest
+- [~] Admin/search specs translated with httptest
 - [ ] Helpers/cache/auth token specs translated
 - [x] go test ./...
 - [x] govulncheck ./...
