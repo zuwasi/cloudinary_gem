@@ -7,13 +7,13 @@ This checklist tracks the original Ruby SDK public areas and their Go replacemen
 - [x] Errors/API errors
 - [x] URL generation core
 - [x] URL signing SHA1/SHA256 short/long
-- [~] Full transformation engine
+- [~] Full transformation engine: chaining/named/basic option maps implemented; advanced layers/conditionals pending
 - [x] API request signing
 - [x] API response/notification verification
 - [x] Preloaded file parsing
 - [~] Auth token generation
 - [~] Analytics signature parity
-- [ ] Responsive helpers
+- [~] Responsive helpers
 - [~] Download/archive URL helpers
 
 ## Upload API
@@ -48,7 +48,7 @@ This checklist tracks the original Ruby SDK public areas and their Go replacemen
 - [x] Cache interfaces and in-memory implementation
 
 ## Tests/security
-- [~] Ruby utils specs translated
+- [~] Ruby utils specs translated: URL/signing/chaining/responsive slices
 - [~] Uploader specs translated with httptest
 - [~] Admin/search specs translated with httptest
 - [ ] Helpers/cache/auth token specs translated
