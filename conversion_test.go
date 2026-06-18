@@ -4,7 +4,7 @@ import "testing"
 
 func TestTransformationStringExtended(t *testing.T) {
 	got := TransformationString(URLOptions{Width: 100, Height: 150, Crop: "fill", Gravity: "face", Radius: "20", Effect: "sepia"})
-	want := "w_100,h_150,c_fill,g_face,r_20,e_sepia"
+	want := "c_fill,h_150,w_100,g_face,r_20,e_sepia"
 	if got != want {
 		t.Fatalf("want %s got %s", want, got)
 	}

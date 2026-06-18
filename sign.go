@@ -43,9 +43,24 @@ func SignParams(params map[string]any, secret string, algo Algorithm) string {
 	return hex.EncodeToString(sum[:])
 }
 
-func (c *Cloudinary) urlSignature(path string) string {
+func (c *Cloudinary) urlSignature(path string, long bool) string {
+	if c.SignatureAlgorithm == SHA256 {
+		sum := sha256.Sum256([]byte(path + c.APISecret))
+		encoded := strings.TrimRight(base64.URLEncoding.EncodeToString(sum[:]), "=")
+		if long {
+			if len(encoded) > 32 {
+				return encoded[:32]
+			}
+			return encoded
+		}
+		return encoded[:8]
+	}
 	sum := sha1.Sum([]byte(path + c.APISecret))
-	return strings.TrimRight(base64.URLEncoding.EncodeToString(sum[:])[:8], "=")
+	encoded := strings.TrimRight(base64.URLEncoding.EncodeToString(sum[:]), "=")
+	if long {
+		return encoded
+	}
+	return encoded[:8]
 }
 
 func VerifyNotificationSignature(body, timestamp, signature, secret string, algo Algorithm, maxAge time.Duration) bool {

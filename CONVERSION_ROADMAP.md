@@ -19,8 +19,8 @@ Original SDK spec files: 58 Ruby spec files
 |---|---|---|---|
 | Base config | `base_config.rb`, `config.rb`, `account_config.rb` | `config.go` | implemented |
 | Exceptions | `exceptions.rb` | Go `error` values/types | partial |
-| URL/transformation utilities | `utils.rb`, `helper.rb`, `video_helper.rb` | `url.go`, `transform.go` | partial |
-| API signing/signature verification | `utils.rb`, `preloaded_file.rb`, `auth_token.rb` | `sign.go`, `auth_token.go`, `preloaded.go` | partial |
+| URL/transformation utilities | `utils.rb`, `helper.rb`, `video_helper.rb` | `url.go`, Ruby parity tests | partial: distribution, suffix, root path, signing, and basic transformations |
+| API signing/signature verification | `utils.rb`, `preloaded_file.rb`, `auth_token.rb` | `sign.go`, `auth_token.go`, `preloaded.go` | partial: SHA1/SHA256 URL signatures and basic request signatures |
 | Upload API | `uploader.rb`, `base_api.rb` | `upload.go`, `client.go` | partial |
 | Admin API | `api.rb`, `account_api.rb` | `admin.go`, `account.go` | partial |
 | Search APIs | `search.rb`, `search_folders.rb` | `search.go` | not started |

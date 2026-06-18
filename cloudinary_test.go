@@ -21,7 +21,7 @@ func TestURL(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	want := "https://res.cloudinary.com/demo/image/upload/w_100,h_150,c_fill/folder/sample.jpg"
+	want := "https://res.cloudinary.com/demo/image/upload/c_fill,h_150,w_100/folder/sample.jpg"
 	if u != want {
 		t.Fatalf("want %s got %s", want, u)
 	}
